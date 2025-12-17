@@ -1,0 +1,321 @@
+{
+  "customers": [
+    {
+      "customer_name": "Rajesh Kumar",
+      "account_number": "ACC001",
+      "issue_date": "2024-01-15",
+      "interest_rate": "8.5",
+      "tenure": 36,
+      "emi_due": "15000.00"
+    },
+    {
+      "customer_name": "Priya Sharma",
+      "account_number": "ACC002",
+      "issue_date": "2024-02-20",
+      "interest_rate": "7.5",
+      "tenure": 24,
+      "emi_due": "12000.00"
+    },
+    {
+      "customer_name": "Amit Patel",
+      "account_number": "ACC003",
+      "issue_date": "2024-03-10",
+      "interest_rate": "9.0",
+      "tenure": 48,
+      "emi_due": "18000.00"
+    },
+    {
+      "customer_name": "Sneha Reddy",
+      "account_number": "ACC004",
+      "issue_date": "2024-04-05",
+      "interest_rate": "8.0",
+      "tenure": 30,
+      "emi_due": "14000.00"
+    },
+    {
+      "customer_name": "Vikram Singh",
+      "account_number": "ACC005",
+      "issue_date": "2024-05-12",
+      "interest_rate": "7.0",
+      "tenure": 24,
+      "emi_due": "11000.00"
+    },
+    {
+      "customer_name": "Anjali Desai",
+      "account_number": "ACC006",
+      "issue_date": "2024-06-18",
+      "interest_rate": "8.5",
+      "tenure": 36,
+      "emi_due": "16000.00"
+    },
+    {
+      "customer_name": "Rahul Mehta",
+      "account_number": "ACC007",
+      "issue_date": "2024-07-22",
+      "interest_rate": "9.5",
+      "tenure": 42,
+      "emi_due": "20000.00"
+    },
+    {
+      "customer_name": "Kavita Nair",
+      "account_number": "ACC008",
+      "issue_date": "2024-08-15",
+      "interest_rate": "7.5",
+      "tenure": 30,
+      "emi_due": "13000.00"
+    },
+    {
+      "customer_name": "Suresh Iyer",
+      "account_number": "ACC009",
+      "issue_date": "2024-09-10",
+      "interest_rate": "8.0",
+      "tenure": 36,
+      "emi_due": "15000.00"
+    },
+    {
+      "customer_name": "Meera Joshi",
+      "account_number": "ACC010",
+      "issue_date": "2024-10-25",
+      "interest_rate": "7.0",
+      "tenure": 24,
+      "emi_due": "10000.00"
+    }
+  ],
+  "payments": [
+    {
+      "account_number": "ACC001",
+      "payment_amount": "5000.00",
+      "payment_date": "2024-02-15T10:30:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC001",
+      "payment_amount": "5000.00",
+      "payment_date": "2024-03-15T11:15:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC001",
+      "payment_amount": "5000.00",
+      "payment_date": "2024-04-15T09:45:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC002",
+      "payment_amount": "6000.00",
+      "payment_date": "2024-03-20T14:20:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC002",
+      "payment_amount": "6000.00",
+      "payment_date": "2024-04-20T15:30:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC003",
+      "payment_amount": "7000.00",
+      "payment_date": "2024-04-10T10:00:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC003",
+      "payment_amount": "7000.00",
+      "payment_date": "2024-05-10T11:00:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC003",
+      "payment_amount": "4000.00",
+      "payment_date": "2024-06-10T12:00:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC004",
+      "payment_amount": "7000.00",
+      "payment_date": "2024-05-05T13:45:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC004",
+      "payment_amount": "7000.00",
+      "payment_date": "2024-06-05T14:15:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC005",
+      "payment_amount": "5500.00",
+      "payment_date": "2024-06-12T16:30:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC006",
+      "payment_amount": "8000.00",
+      "payment_date": "2024-07-18T10:20:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC006",
+      "payment_amount": "8000.00",
+      "payment_date": "2024-08-18T11:30:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC007",
+      "payment_amount": "10000.00",
+      "payment_date": "2024-08-22T09:00:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC008",
+      "payment_amount": "6500.00",
+      "payment_date": "2024-09-15T15:45:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC009",
+      "payment_amount": "7500.00",
+      "payment_date": "2024-10-10T12:00:00Z",
+      "status": "SUCCESS"
+    },
+    {
+      "account_number": "ACC010",
+      "payment_amount": "5000.00",
+      "payment_date": "2024-11-25T14:30:00Z",
+      "status": "SUCCESS"
+    }
+  ],
+  "endpoints": {
+    "customers": {
+      "GET /api/customers": {
+        "description": "Get all customers",
+        "method": "GET",
+        "endpoint": "/api/customers",
+        "response_example": {
+          "id": 1,
+          "customer_name": "Rajesh Kumar",
+          "account_number": "ACC001",
+          "issue_date": "2024-01-15T00:00:00.000Z",
+          "interest_rate": "8.5",
+          "tenure": 36,
+          "emi_due": "15000.00",
+          "created_at": "2024-01-15T10:00:00.000Z"
+        }
+      },
+      "GET /api/customers/:account_number": {
+        "description": "Get customer by account number",
+        "method": "GET",
+        "endpoint": "/api/customers/ACC001",
+        "response_example": {
+          "id": 1,
+          "customer_name": "Rajesh Kumar",
+          "account_number": "ACC001",
+          "issue_date": "2024-01-15T00:00:00.000Z",
+          "interest_rate": "8.5",
+          "tenure": 36,
+          "emi_due": "15000.00",
+          "created_at": "2024-01-15T10:00:00.000Z"
+        }
+      },
+      "POST /api/customers": {
+        "description": "Create a new customer",
+        "method": "POST",
+        "endpoint": "/api/customers",
+        "request_body": {
+          "customer_name": "Rajesh Kumar",
+          "account_number": "ACC001",
+          "issue_date": "2024-01-15",
+          "interest_rate": "8.5",
+          "tenure": 36,
+          "emi_due": "15000.00"
+        },
+        "response_example": {
+          "id": 1,
+          "customer_name": "Rajesh Kumar",
+          "account_number": "ACC001",
+          "issue_date": "2024-01-15T00:00:00.000Z",
+          "interest_rate": "8.5",
+          "tenure": 36,
+          "emi_due": "15000.00",
+          "created_at": "2024-01-15T10:00:00.000Z"
+        }
+      }
+    },
+    "payments": {
+      "POST /api/payments": {
+        "description": "Create a payment for a customer",
+        "method": "POST",
+        "endpoint": "/api/payments",
+        "request_body": {
+          "account_number": "ACC001",
+          "payment_amount": "5000.00"
+        },
+        "response_example": {
+          "message": "Payment processed successfully.",
+          "payment": {
+            "account_number": "ACC001",
+            "paid_amount": "5000.00",
+            "payment_date": "2024-02-15T10:30:00.000Z",
+            "status": "SUCCESS"
+          },
+          "customer": {
+            "account_number": "ACC001",
+            "previous_emi_due": "15000.00",
+            "new_emi_due": "10000.00"
+          }
+        }
+      },
+      "GET /api/payments/:account_number": {
+        "description": "Get payment history for a customer",
+        "method": "GET",
+        "endpoint": "/api/payments/ACC001",
+        "response_example": [
+          {
+            "id": 1,
+            "customer_id": 1,
+            "payment_date": "2024-04-15T09:45:00.000Z",
+            "payment_amount": "5000.00",
+            "status": "SUCCESS"
+          },
+          {
+            "id": 2,
+            "customer_id": 1,
+            "payment_date": "2024-03-15T11:15:00.000Z",
+            "payment_amount": "5000.00",
+            "status": "SUCCESS"
+          },
+          {
+            "id": 3,
+            "customer_id": 1,
+            "payment_date": "2024-02-15T10:30:00.000Z",
+            "payment_amount": "5000.00",
+            "status": "SUCCESS"
+          }
+        ]
+      }
+    }
+  },
+  "notes": {
+    "customers": [
+      "customer_name is optional but recommended",
+      "account_number must be unique",
+      "issue_date should be in YYYY-MM-DD format",
+      "interest_rate is stored as DECIMAL",
+      "tenure is in months (INTEGER)",
+      "emi_due is stored as DECIMAL"
+    ],
+    "payments": [
+      "payments reference customers by account_number in the request",
+      "payment_amount cannot exceed emi_due",
+      "payment_date is automatically set if not provided",
+      "status is typically 'SUCCESS'",
+      "Creating a payment automatically updates the customer's emi_due amount"
+    ],
+    "usage": [
+      "Use this seed data to populate your database for testing",
+      "Customers should be created before payments",
+      "Payments reference customers by account_number",
+      "The emi_due amounts in customers reflect the remaining balance after payments"
+    ]
+  }
+}
