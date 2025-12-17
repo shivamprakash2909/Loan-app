@@ -3,7 +3,7 @@
 
 const axios = require("axios");
 
-const API_URL = "http://192.168.29.15:3000/api/customers";
+const API_URL = "http://13.204.143.232:3000/api/customers";
 
 console.log("Testing connection to:", API_URL);
 

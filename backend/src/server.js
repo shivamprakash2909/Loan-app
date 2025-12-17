@@ -9,7 +9,7 @@ const startServer = async () => {
   try {
     app.listen(PORT, "0.0.0.0", () => {
       console.log(`Server is running on http://localhost:${PORT}`);
-      console.log(`Server is accessible on your network at http://192.168.29.15:${PORT}`);
+      console.log(`Server is accessible on your network at http://13.204.143.232:${PORT}`);
     });
     await sequelize.authenticate();
     console.log("Database connection has been established successfully.");

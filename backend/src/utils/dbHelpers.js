@@ -39,15 +39,42 @@ export async function columnExists(tableName, columnName) {
 }
 
 /**
+ * Check if a table exists
+ */
+async function tableExists(tableName) {
+  try {
+    const [results] = await sequelize.query(
+      `SELECT table_name 
+       FROM information_schema.tables 
+       WHERE table_schema = 'public' AND table_name = :tableName`,
+      {
+        replacements: { tableName },
+      }
+    );
+    return results.length > 0;
+  } catch (error) {
+    console.error(`Error checking table existence for ${tableName}:`, error);
+    return false;
+  }
+}
+
+/**
  * Ensure customer_name column exists, create it if it doesn't
  */
 export async function ensureCustomerNameColumn() {
+  // First check if table exists
+  const tableExistsResult = await tableExists("customers");
+  if (!tableExistsResult) {
+    console.log("⚠️  customers table does not exist yet, skipping column creation");
+    return false;
+  }
+
   const exists = await columnExists("customers", "customer_name");
 
   if (!exists) {
     try {
       console.log("Creating customer_name column...");
-      await sequelize.query(`ALTER TABLE customers ADD COLUMN customer_name VARCHAR(255) DEFAULT 'N/A'`);
+      await sequelize.query(`ALTER TABLE customers ADD COLUMN IF NOT EXISTS customer_name VARCHAR(255) DEFAULT 'N/A'`);
 
       // Update existing records to have 'N/A' if they're null
       await sequelize.query(`UPDATE customers SET customer_name = 'N/A' WHERE customer_name IS NULL`);
@@ -56,8 +83,14 @@ export async function ensureCustomerNameColumn() {
       columnCache.customer_name = true;
       console.log("customer_name column created successfully");
     } catch (error) {
-      console.error("Error creating customer_name column:", error);
-      throw error;
+      // If column already exists or other error, log but don't throw
+      if (error.message && error.message.includes("already exists")) {
+        console.log("customer_name column already exists");
+        columnCache.customer_name = true;
+      } else {
+        console.error("Error creating customer_name column:", error.message);
+        // Don't throw - allow app to continue
+      }
     }
   }
 

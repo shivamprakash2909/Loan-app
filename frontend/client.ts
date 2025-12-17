@@ -7,7 +7,7 @@ import axios from 'axios';
 // Get the API URL - Expo automatically loads EXPO_PUBLIC_* variables from .env
 // Default fallback uses your current IP for mobile devices
 // TEMPORARY: Hardcoded for Expo Go testing (will use env var if available)
-const API_BASE_URL = 'http://192.168.29.15:3000/api';
+const API_BASE_URL = 'http://13.204.143.232:3000/api';
 
 // Debug log to help troubleshoot
 if (__DEV__) {

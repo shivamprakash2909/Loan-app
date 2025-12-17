@@ -17,12 +17,12 @@ async function seedDatabase() {
   try {
     console.log("🌱 Starting database seeding...");
 
-    // Ensure customer_name column exists
-    await ensureCustomerNameColumn();
-
-    // Sync models (create tables if they don't exist)
+    // Sync models (create tables if they don't exist) - MUST be done first
     await sequelize.sync({ force: false });
     console.log("✅ Database tables synced");
+
+    // Ensure customer_name column exists (after tables are created)
+    await ensureCustomerNameColumn();
 
     // Clear existing data (optional - comment out if you want to keep existing data)
     // Must delete payments first due to foreign key constraint
