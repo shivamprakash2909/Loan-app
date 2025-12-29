@@ -2,7 +2,11 @@
 set -e
 
 echo "🌱 Running database seed..."
-node seeds/seed.js || echo "⚠️ Seed already applied, continuing..."
+if node seeds/seed.js; then
+  echo "✅ Seed process completed"
+else
+  echo "⚠️ Seed process encountered an error, but continuing..."
+fi
 
 echo "🚀 Starting server..."
 exec npm start

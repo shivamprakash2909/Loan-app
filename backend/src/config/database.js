@@ -15,15 +15,12 @@ console.log("DB CONFIG VALUES 👉", {
   port: dbConfig.port,
   name: dbConfig.name,
   user: dbConfig.user,
-  password: dbConfig.password ? "***" : undefined,
+  password: dbConfig.password,
 });
 
-// Use connection URI for more reliable connection handling
-const connectionUri = `postgres://${encodeURIComponent(dbConfig.user)}:${encodeURIComponent(dbConfig.password)}@${
-  dbConfig.host
-}:${dbConfig.port}/${dbConfig.name}`;
-
-const sequelize = new Sequelize(connectionUri, {
+const sequelize = new Sequelize(dbConfig.name, dbConfig.user, dbConfig.password, {
+  host: dbConfig.host,
+  port: dbConfig.port,
   dialect: "postgres",
   logging: false,
   pool: {
@@ -31,10 +28,6 @@ const sequelize = new Sequelize(connectionUri, {
     min: 0,
     acquire: 30000,
     idle: 10000,
-    evict: 1000,
-  },
-  retry: {
-    max: 3,
   },
   dialectOptions: {
     connectTimeout: 30000,

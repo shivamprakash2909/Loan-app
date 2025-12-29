@@ -1,0 +1,8 @@
+{
+  "customer_name": "John Doe",
+  "account_number": "ACC011",
+  "issue_date": "2024-12-29",
+  "interest_rate": "8.5",
+  "tenure": 36,
+  "emi_due": "15000.00"
+}
