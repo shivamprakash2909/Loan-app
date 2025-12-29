@@ -12,11 +12,15 @@ const startServer = async () => {
     await sequelize.authenticate();
     console.log("Database connection has been established successfully.");
 
-    // 2️⃣ Sync models
+    // 2️⃣ Test connection pool with a simple query
+    await sequelize.query("SELECT 1");
+    console.log("Connection pool test successful.");
+
+    // 3️⃣ Sync models
     await sequelize.sync();
     console.log("Database synced successfully.");
 
-    // 3️⃣ ONLY THEN start server
+    // 4️⃣ ONLY THEN start server
     app.listen(PORT, "0.0.0.0", () => {
       console.log(`Server is running on http://localhost:${PORT}`);
       console.log(`Server is accessible on your network at http://13.204.143.232:${PORT}`);

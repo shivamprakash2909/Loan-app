@@ -1,21 +1,47 @@
-import { Sequelize } from 'sequelize';
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
+import { Sequelize } from "sequelize";
 dotenv.config();
 
-console.log("DB CONFIG VALUES 👉", {
+const dbConfig = {
   host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
+  port: parseInt(process.env.DB_PORT, 10) || 5432,
   name: process.env.DB_NAME,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
+};
+
+console.log("DB CONFIG VALUES 👉", {
+  host: dbConfig.host,
+  port: dbConfig.port,
+  name: dbConfig.name,
+  user: dbConfig.user,
+  password: dbConfig.password ? "***" : undefined,
 });
 
+// Use connection URI for more reliable connection handling
+const connectionUri = `postgres://${encodeURIComponent(dbConfig.user)}:${encodeURIComponent(dbConfig.password)}@${
+  dbConfig.host
+}:${dbConfig.port}/${dbConfig.name}`;
 
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  dialect: 'postgres',
+const sequelize = new Sequelize(connectionUri, {
+  dialect: "postgres",
   logging: false,
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000,
+    evict: 1000,
+  },
+  retry: {
+    max: 3,
+  },
+  dialectOptions: {
+    connectTimeout: 30000,
+  },
+  define: {
+    timestamps: true,
+  },
 });
 
 export default sequelize;
